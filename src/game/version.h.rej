@@ -1,0 +1,21 @@
+diff a/src/game/version.h b/src/game/version.h	(rejected hunks)
+@@ -5,8 +5,10 @@
+ 
+-// ddnet
+-#define GAME_NAME "DDNet"
+-#define DDNET_VERSION_NUMBER 20030
++// E-Client (Empty Client) — форк DDNet с Personal Flight Assistant.
++//GAME_NAME используется в заголовке окна, shell-регистрации, нотификациях,
++// строке версии. Меняем с "DDNet" на "Empty Client".
++#define GAME_NAME "Empty Client"
++#define ECLIENT_VERSION_NUMBER 10000
+ extern const char *GIT_SHORTREV_HASH;
+ #ifndef GAME_RELEASE_VERSION_INTERNAL
+-#define GAME_RELEASE_VERSION_INTERNAL 20.3
++#define GAME_RELEASE_VERSION_INTERNAL 1.0
+ #endif
+@@ -14,3 +16,3 @@ extern const char *GIT_SHORTREV_HASH;
+ 
+-// teeworlds
++// teeworlds (протокол остаётся совместимым с DDNet 0.6)
+ #define CLIENT_VERSION7 0x0705

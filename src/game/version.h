@@ -1,0 +1,25 @@
+/* (c) Magnus Auvinen. See licence.txt in the root of the distribution for more information. */
+/* If you are missing that file, acquire a complete release at teeworlds.com.                */
+#ifndef GAME_VERSION_H
+#define GAME_VERSION_H
+
+// E-Client (Empty Client) — форк DDNet с Personal Flight Assistant.
+//GAME_NAME используется в заголовке окна, shell-регистрации, нотификациях,
+// строке версии. Меняем с "DDNet" на "Empty Client".
+#define GAME_NAME "Empty Client"
+#define ECLIENT_VERSION_NUMBER 10000
+extern const char *GIT_SHORTREV_HASH;
+#ifndef GAME_RELEASE_VERSION_INTERNAL
+#define GAME_RELEASE_VERSION_INTERNAL 1.0
+#endif
+#define GAME_RELEASE_VERSION STRINGIFY(GAME_RELEASE_VERSION_INTERNAL)
+
+// teeworlds (протокол остаётся совместимым с DDNet 0.6)
+#define CLIENT_VERSION7 0x0705
+// For compatibility with DDNet client 15.8 and older we need to include the prefix `0.6` in the version string
+// because this was used for a "Compatible version" filter in the server browser.
+#define GAME_VERSION "0.6, " GAME_RELEASE_VERSION
+#define GAME_NETVERSION "0.6 626fce9a778df4d4"
+#define GAME_NETVERSION7 "0.7 802f1be60a05665f"
+
+#endif
