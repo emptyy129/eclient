@@ -158,7 +158,6 @@ tags
 *.zip
 # tidy-alphabetical-end
 
-# Personal tokens
-*.txt
-*token*
-*secret*
+githubeclienttoken.txt
+githubeclienttoken.txt
+ghptokeneclient.txt
