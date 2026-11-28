@@ -203,7 +203,6 @@ public:
         pfa::CPersonalFlightAssistant m_PersonalFlightAssistant;
 
         // Personal Flight Assistant — кастомный модуль
-        pfa::CPersonalFlightAssistant m_PersonalFlightAssistant;
 
 private:
         std::vector<class CComponent *> m_vpAll;

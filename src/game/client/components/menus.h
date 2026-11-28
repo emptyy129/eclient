@@ -30,6 +30,8 @@
 #include <optional>
 #include <vector>
 
+namespace pfa { class CPersonalFlightAssistant; class CDatabase; class CSettingsUi; }
+
 class CMenus : public CComponent
 {
         static ColorRGBA ms_GuiColor;
@@ -728,7 +730,6 @@ public:
                 SETTINGS_SOUND,
                 SETTINGS_DDNET,
                 SETTINGS_ASSETS, SETTINGS_PERSONAL_FLIGHT_ASSISTANT,
-                SETTINGS_PERSONAL_FLIGHT_ASSISTANT,
                 SETTINGS_CREDITS,
 
                 SETTINGS_LENGTH,
