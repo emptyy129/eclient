@@ -97,7 +97,7 @@ void CLauncher::CheckForUpdates()
 
     // Используем curl через system() — самый простой кросс-платформенный способ
     // без добавления зависимостей в лаунчер.
-    const char *pRepo = "yourusername/eclient"; // ЗАМЕНИТЕ на ваш GitHub repo
+    const char *pRepo = "emptyy129/eclient"; // ЗАМЕНИТЕ на ваш GitHub repo
     char aUrl[256];
     str_format(aUrl, sizeof(aUrl),
         "https://api.github.com/repos/%s/releases/latest", pRepo);

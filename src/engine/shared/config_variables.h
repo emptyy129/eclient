@@ -844,5 +844,5 @@ MACRO_CONFIG_INT(PfaProfileActive, pfa_profile_active, 0, 0, 100, CFGFLAG_CLIENT
 // Updates via GitHub Releases
 MACRO_CONFIG_INT(PfaAutoUpdateCheck, pfa_auto_update_check, 1, 0, 1, CFGFLAG_CLIENT | CFGFLAG_SAVE, "Check for updates automatically at startup")
 MACRO_CONFIG_INT(PfaUpdateChannel, pfa_update_channel, 0, 0, 2, CFGFLAG_CLIENT | CFGFLAG_SAVE, "Update channel: 0=stable, 1=beta, 2=dev")
-MACRO_CONFIG_STR(PfaUpdateRepo, pfa_update_repo, 128, "yourusername/eclient", CFGFLAG_CLIENT | CFGFLAG_SAVE, "GitHub repo (owner/repo) for E-Client updates")
+MACRO_CONFIG_STR(PfaUpdateRepo, pfa_update_repo, 128, "emptyy129/eclient", CFGFLAG_CLIENT | CFGFLAG_SAVE, "GitHub repo (owner/repo) for E-Client updates")
 MACRO_CONFIG_INT(PfaBackupKeep, pfa_backup_keep, 3, 1, 20, CFGFLAG_CLIENT | CFGFLAG_SAVE, "How many recent backups to keep after updates")
