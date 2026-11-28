@@ -1,0 +1,26 @@
+﻿name: Build Windows
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+jobs:
+  windows:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get ddnet-libs
+        run: |
+          if (-not (Test-Path ddnet-libs)) { git clone --depth 1 https://github.com/ddnet/ddnet-libs.git ddnet-libs }
+      - uses: ilammy/msvc-dev-cmd@v1
+      - name: Configure
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DVIDEORECORDER=OFF -DVULKAN=OFF -DTESTS=OFF -DSTEAM=OFF -DDISCORD=OFF
+      - name: Build client
+        run: cmake --build build --target game-client --parallel
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eclient-windows
+          path: |
+            build/*.exe
+            build/*.dll
+            data
+          if-no-files-found: warn
